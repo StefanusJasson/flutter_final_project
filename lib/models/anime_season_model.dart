@@ -10,6 +10,7 @@ class AnimeSeason {
   final int? year;
   final String? image;
   final String? synopsis;
+  final List<Map>? characters;
 
   AnimeSeason({
     this.id,
@@ -23,6 +24,7 @@ class AnimeSeason {
     this.year,
     this.image,
     this.synopsis,
+    this.characters
   });
 
    factory AnimeSeason.fromJson(Map<String, dynamic> json) => AnimeSeason(
@@ -36,5 +38,6 @@ class AnimeSeason {
     season: json["season"],
     year: int.tryParse(json["year"]),
     image: json["images"]["jpg"]["image_url"],
+    synopsis: json["synopsis"],
   );
 }

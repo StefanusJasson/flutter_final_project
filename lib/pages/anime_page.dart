@@ -28,7 +28,7 @@ class _AnimePageState extends State<AnimePage> {
             textAlign: TextAlign.center,
           ),
           Text(
-            animeSeason.titleEnglish as String, 
+            animeSeason.titleEnglish == null? '': animeSeason.titleEnglish as String, 
             textAlign: TextAlign.center,
           ),
           Image.network(
@@ -95,6 +95,41 @@ class _AnimePageState extends State<AnimePage> {
               ),
               Divider(),
               Text(animeSeason.synopsis as String),
+            ],
+          ),
+          Column(
+            children: [
+              Text(
+                'Characters',
+                style: TextStyle(fontSize: 18),
+              ),
+              Divider(),
+              SizedBox(
+                height: 460,
+                child: ListView.builder(
+                  itemCount: animeSeason.characters == null? 0:animeSeason.characters?.length,
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.all(10),
+                  itemBuilder: (context, index) => Row(
+                    children: [
+                      Column(
+                        children: [
+                          Image.network(
+                            animeSeason.characters?[index]['image'],
+                            height: 200,
+                          ),
+                          Text(animeSeason.characters?[index]['name']),
+                          Image.network(
+                            animeSeason.characters?[index]['seiyuu_image'],
+                            height: 200,
+                          ),
+                          Text(animeSeason.characters?[index]['seiyuu']),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ],
