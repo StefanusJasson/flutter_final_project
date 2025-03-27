@@ -139,7 +139,7 @@ List<AnimeSeason> animeSeasonList = [
     AnimeSeason(
       id: 55318,
       title: 'Medalist',
-      titleEnglish: null,
+      titleEnglish: 'Medalist',
       type: 'TV',
       source: 'Manga',
       episodeCount: 13,
@@ -183,8 +183,8 @@ List<AnimeSeason> animeSeasonList = [
     ),
     AnimeSeason(
       id: 53580,
-      title: 'Tensei shitara Slime Datta Ken 3rd Season',
-      titleEnglish: 'That Time I Got Reincarnated as a Slime Season 3',
+      title: 'Tensei shitara Slime Datta Ken',
+      titleEnglish: 'That Time I Got Reincarnated as a Slime',
       type: 'TV',
       source: 'Manga',
       episodeCount: 24,

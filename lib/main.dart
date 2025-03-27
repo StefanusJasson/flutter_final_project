@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_final_project/bloc/language_cubit.dart';
 import 'package:flutter_final_project/bloc/theme_cubit.dart';
 import 'package:flutter_final_project/bloc/theme_state.dart';
 import 'package:flutter_final_project/pages/anime_season_page.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => ThemeCubit()),
+        BlocProvider(create: (context) => LanguageCubit()),
       ],
       child: BlocBuilder<ThemeCubit, ThemeState>(
         builder: (context, state) {

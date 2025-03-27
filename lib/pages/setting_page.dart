@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_final_project/bloc/language_cubit.dart';
+import 'package:flutter_final_project/bloc/language_state.dart';
 import 'package:flutter_final_project/bloc/theme_cubit.dart';
 import 'package:flutter_final_project/bloc/theme_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -38,6 +40,28 @@ class _SettingPageState extends State<SettingPage> {
                   },
                   leading: CircleAvatar(child: Icon(Icons.light_mode)),
                   title: Text('Change Theme'),
+                );
+              }
+            },
+          ),
+          BlocBuilder<LanguageCubit, LanguageState>(
+            builder: (context, state) {
+              if(state.language == 'Jp') {
+                return ListTile(
+                  onTap: () {
+                    context.read<LanguageCubit>().setDisplayLanguage('En');
+                  },
+                  leading: CircleAvatar(child: Text('Jp')),
+                  title: Text('Change Display Language'),
+                );
+              }
+              else{
+                return ListTile(
+                  onTap: () {
+                    context.read<LanguageCubit>().setDisplayLanguage('Jp');
+                  },
+                  leading: CircleAvatar(child: Text('En')),
+                  title: Text('Change Display Language'),
                 );
               }
             },
