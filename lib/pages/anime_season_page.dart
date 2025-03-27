@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_final_project/components/anime_card.dart';
 import 'package:flutter_final_project/const/anime_season_list.dart';
 import 'package:flutter_final_project/extensions/context_extension.dart';
-import 'package:flutter_final_project/models/anime_season_model.dart';
 import 'package:flutter_final_project/pages/anime_page.dart';
 import 'package:flutter_final_project/pages/setting_page.dart';
 

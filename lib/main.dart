@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_final_project/bloc/theme_cubit.dart';
 import 'package:flutter_final_project/bloc/theme_state.dart';
 import 'package:flutter_final_project/pages/anime_season_page.dart';
-import 'package:jikan_api/jikan_api.dart';
 
 void main() {
   runApp(const MyApp());
